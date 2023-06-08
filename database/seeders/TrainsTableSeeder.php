@@ -23,7 +23,6 @@ class TrainsTableSeeder extends Seeder
         for ($i = 0; $i < 10 ; $i ++) {
             $new_train = new Train();
             $new_train->company = $faker->randomElement($companies);
-            $new_train->slug = Str::slug($new_train->company, '-');
             $new_train->departure_station = $faker->word();
             $new_train->arrival_station = $faker->word();
             $new_train->departure_time = $faker->time();
