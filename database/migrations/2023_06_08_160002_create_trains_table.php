@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('departure_time', 5);
             $table->string('arrival_time', 5);
             $table->smallInteger('code')->unsigned()->unique();
-            $table->tinylInteger('carriages')->unsigned();
+            $table->tinyInteger('carriages')->unsigned();
             $table->boolean('in_time');
             $table->boolean('cancelled');
             $table->timestamps();
