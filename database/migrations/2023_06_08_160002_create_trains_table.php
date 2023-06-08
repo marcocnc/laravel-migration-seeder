@@ -23,8 +23,8 @@ return new class extends Migration
             $table->string('arrival_time', 5);
             $table->smallInteger('code')->unsigned()->unique();
             $table->tinyInteger('carriages')->unsigned();
-            $table->boolean('in_time');
-            $table->boolean('cancelled');
+            $table->boolean('in_time')->nullable();
+            $table->boolean('cancelled')->nullable();
             $table->timestamps();
         });
     }
